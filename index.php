@@ -14,6 +14,8 @@ $timeStep = 10**9;
 $interval = new DateInterval('PT' . $timeStep . 'S');
 $arrivalDate = $timeTravel->findDate($interval);
 
+echo 'Doc est parti à la date du: ' . ($timeTravel->getStart()->format('d-m-Y')) . '<br/>' . '<br/>';
+
 echo 'Doc a été projeté à la date du: ' . ($arrivalDate->format('d-m-Y')) . '<br/>' . '<br/>';
 
 $timeTravel->setEnd($arrivalDate);
